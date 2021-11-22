@@ -20,16 +20,16 @@
          <div class="mail-containter">
             <ul
             v-if="!isLoading">
-               <li v-for="(mail, index) in mailList"><span>{{index + 1 + '. '}}</span>{{mail}}</li>
+               <li v-for="(mail, index) in mailList" v-cloak><span v-cloak>{{index + 1 + '. '}}</span>{{mail}}</li>
             </ul>
-            <h2 v-else >loading....</h2>
+            <h2 v-else v-cloak>loading....</h2>
          </div>
       </div>
       <div 
          v-else
          class="error d-flex justify-content-center align-items-center flex-column">
          <i class="fa-solid fa-screwdriver-wrench"></i>
-         <h1>Ci dispiace! <br>Al momento il server è in manutenzione <br>
+         <h1 v-cloak>Ci dispiace! <br>Al momento il server è in manutenzione <br>
          Riprova più tardi</h1> 
       </div>
    </div>
